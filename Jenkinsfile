@@ -18,7 +18,9 @@ pipeline {
             }
             stage {'Archive Artifacts'}{
                   archiveArtifacts artifacts: 'target/*.jar'
-            }    
+            }
+            stage ('Deployment'){
+                nexusArtifactUploader artifacts: [[
         }
     }
     
