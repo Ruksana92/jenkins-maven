@@ -4,7 +4,7 @@ pipeline {
 
     tools {
 
-        maven "maven395"
+        maven "maven363"
     }
 
     
