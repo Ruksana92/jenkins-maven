@@ -16,6 +16,9 @@ pipeline {
                 sh "mvn -Dmaven.test.failure.ignore=clean test package"
                 
             }
+            stage {'Archive Artifacts'}{
+                  archiveArtifacts artifacts: 'target/*.jar'
+            }    
         }
     }
     
